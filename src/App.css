@@ -1,0 +1,14 @@
+.header{
+  display: flex;
+  gap: 20px;
+  background-color: #39aebd;
+  padding: 10px;
+  color: #fff;
+  height: 50px;
+  align-items: center;
+}
+
+.header p{
+  font-size: 20px;
+  font-weight: 600;
+}
