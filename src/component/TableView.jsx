@@ -63,7 +63,7 @@ function TableView() {
     setMaxPrice((prev) => ({ ...prev, sale_price: highestSalePrice }));
     console.log(highestSalePrice);
     setSalePriceRange([0, highestSalePrice]);
-    
+
     const categories = [...new Set(sampleData.map(item => item.category))];
     const subCategories = [...new Set(sampleData.map(item => item.subcategory))];
     setCategoryList(categories)
@@ -193,7 +193,6 @@ function TableView() {
         size: 150,
         filterVariant: "range",
         filterFn: "between",
-        Cell:({cell})=> cell.getValue()===null? 0 : cell.getValue()
       },
       {
         accessorKey: "sale_price",
@@ -201,7 +200,7 @@ function TableView() {
         size: 150,
         filterVariant: "range",
         filterFn: "between",
-        Cell:({cell})=> cell.getValue()===null? 0 : cell.getValue()
+        Cell:({cell})=> cell.getValue()===null? "-" : cell.getValue()
       },
     ],
     [categoryList, subcategoryList]
