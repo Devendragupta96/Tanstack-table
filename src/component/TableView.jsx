@@ -200,7 +200,6 @@ function TableView() {
         size: 150,
         filterVariant: "range",
         filterFn: "between",
-        Cell:({cell})=> cell.getValue()===null? "-" : cell.getValue()
       },
     ],
     [categoryList, subcategoryList]
